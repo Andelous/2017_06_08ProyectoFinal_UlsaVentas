@@ -173,11 +173,7 @@ public class CompraJDBC {
 				"comentarioDeCompra = ?, " +
 				"comentarioDeVenta = ?, " +
 				"calificacionDeCompra = ?, " +
-				"calificacionDeVenta = ?, " +
-				"idUsuario = ?, " +
-				"idPublicacion = ?, " +
-				"idDireccion = ?, " +
-				"idTarjeta = ? " +
+				"calificacionDeVenta = ? " +
 			"WHERE idCompra = ?";
 		
 		Connection c = null;
@@ -194,11 +190,7 @@ public class CompraJDBC {
 			ps.setString(4, c1.getComentarioDeVenta());
 			ps.setInt(5, c1.getCalificacionDeCompra());
 			ps.setInt(6, c1.getCalificacionDeVenta());
-			ps.setInt(7, c1.getIdUsuario());
-			ps.setInt(8, c1.getIdPublicacion());
-			ps.setInt(9, c1.getIdDireccion());
-			ps.setInt(10, c1.getIdTarjeta());
-			ps.setInt(11, c1.getIdCompra());
+			ps.setInt(7, c1.getIdCompra());
 			
 			int filasActualizadas = ps.executeUpdate();
 			

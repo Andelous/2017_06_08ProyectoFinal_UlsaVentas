@@ -139,8 +139,7 @@ public class DireccionJDBC {
 				"colonia = ?, " + 
 				"codigoPostal = ?, "+
 				"estado = ?, " +
-				"isSucursal = ?, " +
-				"idUsuario = ? " +
+				"isSucursal = ? " +
 			"WHERE idDireccion = ? ";
 		
 		Connection c = null;
@@ -158,8 +157,7 @@ public class DireccionJDBC {
 			ps.setString(5, d.getCodigoPostal());
 			ps.setString(6, d.getEstado());
 			ps.setBoolean(7, d.isSucursal());
-			ps.setInt(8, d.getIdUsuario());
-			ps.setInt(9, d.getIdDireccion());
+			ps.setInt(8, d.getIdDireccion());
 			
 			int filasActualizadas = ps.executeUpdate();
 			

@@ -2,7 +2,9 @@ package modelo;
 
 import java.sql.Date;
 
+import dao.DireccionJDBC;
 import dao.PublicacionJDBC;
+import dao.TarjetaDeCreditoJDBC;
 import dao.UsuarioJDBC;
 
 public class Compra {
@@ -29,6 +31,14 @@ public class Compra {
 	
 	public Publicacion getPublicacion() {
 		return PublicacionJDBC.seleccionarPublicacion(this.idPublicacion);
+	}
+	
+	public TarjetaDeCredito getTarjeta() {
+		return TarjetaDeCreditoJDBC.seleccionarTarjetaDeCredito(this.idTarjeta);
+	}
+	
+	public Direccion getDireccion() {
+		return DireccionJDBC.seleccionarDireccion(this.idDireccion);
 	}
 	
 	// GETTERS

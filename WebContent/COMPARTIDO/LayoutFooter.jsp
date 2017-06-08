@@ -7,7 +7,7 @@
                         <p class="text-center text-info">&copy; 2017 - <strong>ULSA</strong> Ventas</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="text-center text-info"><a href="#">Acerca de nosotros <span class="glyphicon glyphicon-question-sign"></span></a></p>
+                        <p class="text-center text-info"><a href="<%= request.getContextPath() %>/Acerca.jsp">Acerca de nosotros <span class="glyphicon glyphicon-question-sign"></span></a></p>
                     </div>
                 </div>
             </div>
